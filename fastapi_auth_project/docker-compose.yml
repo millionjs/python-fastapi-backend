@@ -9,4 +9,18 @@ services:
       - .env
     volumes:
       - .:/app
-    command: uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: wlj
+      MYSQL_DATABASE: my_blogs
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:

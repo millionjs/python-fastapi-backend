@@ -1,4 +1,5 @@
 from fastapi import Depends, FastAPI, HTTPException, status
+# noinspection PyPackageRequirements
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 
