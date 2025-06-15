@@ -12,6 +12,9 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 
 
+[//]: # (或者使用Docker 进行启动)
+docker-compose up -d
+
 访问：http://localhost:8000
 访问：http://127.0.0.1:8000/docs#/
 访问：http://127.0.0.1:8000/redoc
